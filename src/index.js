@@ -35,11 +35,17 @@ function BookList() {
 }
 
 const Book = ({ img, title, author }) => {
+  const clickHandler = () => {
+    console.log("Hello world")
+  }
   return (
     <article className="book">
       <Image image={img}/>
       <Title title={title}/>
       <Author author={author}/>
+      <button type="button" onClick={clickHandler}>
+        Reference example
+      </button>
     </article>
   );
 }
