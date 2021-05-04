@@ -3,23 +3,30 @@ import ReactDom from 'react-dom';
 import './index.css'
 
 // setup variables
-const firstBook = {
-  author: 'Josh Hawley',
-  title: 'The Tyranny of Big Tech',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/91QrUUK6WQL._AC_UL200_SR200,200_.jpg'
-}
-
-const secondBook = {
-  author: 'Don Miguel Ruiz',
-  title: 'The Four Agreements: A Practical Guide to Personal Freedom',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/91p5b0UgbKL._AC_UL200_SR200,200_.jpg'
-}
+const books = [
+  {
+    author: 'Josh Hawley',
+    title: 'The Tyranny of Big Tech',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/91QrUUK6WQL._AC_UL200_SR200,200_.jpg'
+  }, 
+  {
+    author: 'Don Miguel Ruiz',
+    title: 'The Four Agreements: A Practical Guide to Personal Freedom',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/91p5b0UgbKL._AC_UL200_SR200,200_.jpg'
+  },
+  {
+    author: 'Patricia Spigarelli Aston',
+    title: 'Crisis Preparedness Handbook: A Comprehensive Guide to Home Storage and Physical Survival',
+    img: 'https://images-na.ssl-images-amazon.com/images/I/71q9ahmiwhL._AC_UL200_SR200,200_.jpg'
+  }
+];
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book author={firstBook.author} title={firstBook.title} image={firstBook.img}/>
-      <Book author={secondBook.author} title={secondBook.title} image={secondBook.img}/>
+      {books.map(book => {
+          return <Book author={book.author} title={book.title} image={book.img}/>
+      })}
     </section>
   );
 }
