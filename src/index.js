@@ -29,5 +29,6 @@ const Image = () => {
 }
 
 const Title = () => <h1>The Tyranny of Big Tech</h1>;
-const Author = () => <h4>Josh Hawley</h4>;
+const Author = () => <h4 style={{color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem'}}>Josh Hawley</h4>;
+
 ReactDom.render(<BookList />, document.getElementById('root'));
