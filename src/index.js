@@ -5,16 +5,19 @@ import './index.css'
 // setup variables
 const books = [
   {
+    id: 1,
     author: 'Josh Hawley',
     title: 'The Tyranny of Big Tech',
     img: 'https://images-na.ssl-images-amazon.com/images/I/91QrUUK6WQL._AC_UL200_SR200,200_.jpg'
   }, 
   {
+    id: 2,
     author: 'Don Miguel Ruiz',
     title: 'The Four Agreements: A Practical Guide to Personal Freedom',
     img: 'https://images-na.ssl-images-amazon.com/images/I/91p5b0UgbKL._AC_UL200_SR200,200_.jpg'
   },
   {
+    id: 3,
     author: 'Patricia Spigarelli Aston',
     title: 'Crisis Preparedness Handbook: A Comprehensive Guide to Home Storage and Physical Survival',
     img: 'https://images-na.ssl-images-amazon.com/images/I/71q9ahmiwhL._AC_UL200_SR200,200_.jpg'
@@ -24,19 +27,19 @@ const books = [
 function BookList() {
   return (
     <section className="booklist">
-      {books.map((book, index) => {
-          return <Book key={index} author={book.author} title={book.title} image={book.img}/>
+      {books.map((book) => {
+          return <Book key={book.id} {...book}/>
       })}
     </section>
   );
 }
 
-const Book = (props) => {
+const Book = ({ img, title, author }) => {
   return (
     <article className="book">
-      <Image image={props.image}/>
-      <Title title={props.title}/>
-      <Author author={props.author}/>
+      <Image image={img}/>
+      <Title title={title}/>
+      <Author author={author}/>
     </article>
   );
 }
