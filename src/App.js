@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Example from './examples/1-error-example';
+import Example from './examples/2-useStateBasic';
 
 function App() {
   return (
