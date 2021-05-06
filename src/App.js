@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Example from './examples/3-useState-array';
+import Example from './examples/4-userState-object';
 
 function App() {
   return (
