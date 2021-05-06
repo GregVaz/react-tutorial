@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Example from './examples/2-useStateBasic';
+import Example from './examples/3-useState-array';
 
 function App() {
   return (
